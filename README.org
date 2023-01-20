@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       e06acad3-4033-4723-9aa4-599541d2c20f
+:END:
+#+TITLE: User In Borderland Bot
+#+AUTHOR: Costin Dragoi
+#+DATE: [2023-01-20 Fri]
+#+FILETAGS: project
+#+CATEGORY: public
+
+Starting Chat Bot project about replicating the TV show Alice In Borderland games in Telegram.

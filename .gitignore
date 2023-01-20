@@ -1,0 +1,5 @@
+resources/configs.edn
+
+.cpcache/
+.dir-locals.el
+.nrepl-port
