@@ -1,5 +1,9 @@
-resources/configs.edn
+resources/config.edn
+resources/data.edn
 
 .cpcache/
 .dir-locals.el
 .nrepl-port
+.clj-kondo/
+.lsp/
+target/
