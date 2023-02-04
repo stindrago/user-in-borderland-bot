@@ -1,0 +1,4 @@
+{:bot-token "paste-your-token-here"
+ :timeout 10
+ :sleep 10000
+ :games {:h2 {:name "Two of Hearts" :icon "2️⃣♥️" :matches #{"h2" "2h" :h2 :2h "two of hearts" "2♥️"}}}}
