@@ -1,5 +1,10 @@
 {:paths ["src" "resources"]
  :deps {cheshire/cheshire {:mvn/version "5.11.0"}
+        clojure.java-time/clojure.java-time {:mvn/version "1.2.0"}
+        org.clojure/tools.logging {:mvn/version "1.2.4"}
         telegrambot-lib/telegrambot-lib {:mvn/version "2.4.0"}}
- :aliases {:dev  {:main-opts ["-m" "core"]
-                  :extra-paths ["dev"]}}}
+ :aliases {:dev  {:main-opts ["-m" "user-in-borderland-bot.core"]}
+
+           :build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.3"}}
+                   :extra-paths ["dev"]
+                   :ns-default build}}}
