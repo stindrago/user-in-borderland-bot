@@ -5,6 +5,128 @@
 #+AUTHOR: Costin Dragoi
 #+DATE: [2023-01-20 Fri]
 #+FILETAGS: project
-#+CATEGORY: public
+#+CATEGORY: project
+#+EXCLUDE_TAGS: ignore
 
-Starting Chat Bot project about replicating the TV show Alice In Borderland games in Telegram.
+* Tasks :ignore:
+
+** TODO User In Bordeland Bot
+:PROPERTIES:
+:CATEGORY: project
+:END:
+:LOGBOOK:
+CLOCK: [2023-02-04 Sat 14:05]--[2023-02-04 Sat 15:05] =>  1:00
+CLOCK: [2023-02-04 Sat 10:20]--[2023-02-04 Sat 12:12] =>  1:52
+CLOCK: [2023-02-03 Fri 18:20]--[2023-02-03 Fri 19:45] =>  1:25
+CLOCK: [2023-02-02 Thu 13:29]--[2023-02-02 Thu 19:05] =>  5:36
+CLOCK: [2023-02-02 Thu 12:35]--[2023-02-02 Thu 13:00] =>  0:25
+CLOCK: [2023-02-01 Wed 16:42]--[2023-02-01 Wed 19:50] =>  3:08
+CLOCK: [2023-02-01 Wed 13:39]--[2023-02-01 Wed 16:25] =>  2:46
+CLOCK: [2023-02-01 Wed 10:55]--[2023-02-01 Wed 13:00] =>  2:05
+CLOCK: [2023-02-01 Wed 09:20]--[2023-02-01 Wed 10:25] =>  1:05
+CLOCK: [2023-01-31 Tue 14:26]--[2023-01-31 Tue 20:12] =>  5:46
+CLOCK: [2023-01-31 Tue 10:35]--[2023-01-31 Tue 14:00] =>  3:25
+CLOCK: [2023-01-30 Mon 19:52]--[2023-01-30 Mon 20:34] =>  0:42
+CLOCK: [2023-01-30 Mon 12:57]--[2023-01-30 Mon 18:40] =>  5:43
+CLOCK: [2023-01-30 Mon 12:10]--[2023-01-30 Mon 12:45] =>  0:35
+CLOCK: [2023-01-28 Sat 15:18]--[2023-01-28 Sat 20:26] =>  5:08
+CLOCK: [2023-01-28 Sat 11:21]--[2023-01-28 Sat 14:00] =>  2:39
+CLOCK: [2023-01-27 Fri 14:51]--[2023-01-27 Fri 21:21] =>  6:30
+CLOCK: [2023-01-27 Fri 12:23]--[2023-01-27 Fri 14:00] =>  1:37
+CLOCK: [2023-01-27 Fri 10:36]--[2023-01-27 Fri 11:40] =>  1:04
+CLOCK: <2023-01-27 Fri 08:33>--[2023-01-27 Fri 10:00] =>  1:27
+CLOCK: [2023-01-27 Fri 01:22]--[2023-01-27 Fri 03:15] =>  1:53
+CLOCK: [2023-01-26 Thu 14:10]--[2023-01-26 Thu 21:30] =>  7:20
+CLOCK: [2023-01-26 Thu 11:22]--[2023-01-26 Thu 13:30] =>  2:08
+- State "TODO"       from              [2023-01-26 Thu 11:22]
+:END:
+
+* About
+
+Adapting the manga and TV Show games of Alice In Borderland for a chat-bot in Telegram and adding some of my own.
+
+#+NAME: Chatbot preview
+#+ATTR_HTML: width="300px" :align center
+#+ATTR_ORG: :width 100
+[[./resources/images/screenshot-1-drop-shadow.png]] [[./resources/images/screenshot-2-drop-shadow.png]] [[./resources/images/screenshot-3-drop-shadow.png]]
+
+* Tools
+
+- [[https://github.com/doomemacs/doomemacs][Doom Emacs]]
+- [[http://openjdk.org][openjdk]]
+- [[https://clojure.org][Clojure]]
+- [[https://core.telegram.org/bots/api][Telegram Bot API]]
+- [[https://github.com/wdhowe/telegrambot-lib][telegrambot-lib]]
+
+* Game
+
+** Available
+
+Spades (♠), diamonds (♦), hearts (♥) and clubs (♣).
+
+#+NAME: Supported games
+#+ATTR_LATEX: :center nil
+| ♠️ | ♦️ | ♥️ | ♣️ |
+|----+----+----+----|
+|  1 |  1 |  1 |  1 |
+|  2 |  2 |  2 |  2 |
+|  3 |  3 |  3 |  3 |
+|  4 |  4 |  4 |  4 |
+|  5 |  5 |  5 |  5 |
+|  6 |  6 |  6 |  6 |
+|  7 |  7 |  7 |  7 |
+|  8 |  8 |  8 |  8 |
+|  9 |  9 |  9 |  9 |
+| 10 | 10 | 10 | 10 |
+|  J |  J |  J |  J |
+|  Q |  Q |  Q |  Q |
+|  K |  K |  K |  K |
+
+** Rules
+
+*** Two of hearts
+
+#+begin_src
+       (
+   '( '
+  "'  //))
+ ( ''"
+ _||__ ____ ____ ____
+(o)___)}1__}}2__}}3__}
+'U'0 0  0 0  0 0  0 0
+#+end_src
+
+The players have to get on board the train. All players are in separated trains. They have to arrive to the locomotive. One of the carriages contains a toxic gas that will kill the players if they aren't wearing the mask. The players have to make a decision to enter a carriage with or without the mask. The number of wagons is determined by the number of players, the more players there are the more wagons the train will have.
+
+* Development
+
+** Prerequisites
+
+Install these packages first.
+
+- openjdk@11
+- clojure
+
+** Add the bot token
+
+1. Create a new bot with [[https://telegram.me/BotFather][BotFather]].
+2. Copy the generated token.
+3. Replace the token string in [[./resources/config.edn]], as ~:bot-token "5641905655:AAE8z..."~ with your own.
+
+** Build from source
+
+#+begin_src shell
+git clone https://git.dragoi.me/costin/user-in-borderland-bot.git
+cd user-in-borderland-bot
+clj -T:build uber
+#+end_src
+
+** Run
+
+#+begin_src shell
+java -jar user-in-borderland-bot-0.0.1-standalone.jar
+#+end_src
+
+* [[./LICENSE][License]]
+
+[[https://www.gnu.org/licenses/agpl-3.0.en.html][AGPL v3]].
