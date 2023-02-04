@@ -127,6 +127,10 @@ clj -T:build uber
 java -jar user-in-borderland-bot-0.0.1-standalone.jar
 #+end_src
 
+* Attributions
+
+- [[Two of hearts]] ASCII art from [[https://ascii.co.uk/art/train]].
+
 * [[./LICENSE][License]]
 
 [[https://www.gnu.org/licenses/agpl-3.0.en.html][AGPL v3]].
