@@ -2,7 +2,7 @@
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]))
 
-(def filename-data (io/resource "data.edn"))
+(def filename-data "resources/data.edn")
 (def filename-config (io/resource "config.edn"))
 
 (defn read-large-file
@@ -15,7 +15,7 @@
 (defn write-large-file
   "Write large `data' to `file'."
   [data file]
-  (with-open [w (clojure.java.io/writer file)]
+  (with-open [w (io/writer (io/file file))]
     (binding [*out* w]
       (pr data))))
 
