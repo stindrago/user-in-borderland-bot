@@ -129,7 +129,7 @@ java -jar user-in-borderland-bot-0.0.1-standalone.jar
 
 * Attributions
 
-- [[Two of hearts]] ASCII art from [[https://ascii.co.uk/art/train]].
+- Two of hearts ASCII art from [[https://ascii.co.uk/art/train]].
 
 * [[./LICENSE][License]]
 
