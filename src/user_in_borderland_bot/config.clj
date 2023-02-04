@@ -39,8 +39,5 @@
 (def sleep (-> configs
                :sleep))
 
-(def chat (-> configs
-              :test-chat))
-
 (def games (-> configs
                :games))
