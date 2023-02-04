@@ -65,7 +65,7 @@ Adapting the manga and TV Show games of Alice In Borderland for a chat-bot in Te
 Spades (♠), diamonds (♦), hearts (♥) and clubs (♣).
 
 #+NAME: Available games
-#+ATTR_HTML :align center
+#+ATTR_HTML: :align center
 |   ♠️ |   ♦️ |   ♥️ |   ♣️ |
 |------+------+------+------|
 |  +K+ |  +K+ |  +K+ |  +K+ |
@@ -79,7 +79,7 @@ Spades (♠), diamonds (♦), hearts (♥) and clubs (♣).
 |  +5+ |  +5+ |  +5+ |  +5+ |
 |  +4+ |  +4+ |  +4+ |  +4+ |
 |  +3+ |  +3+ |  +3+ |  +3+ |
-|  +2+ |  +2+ |  _2_ |  +2+ |
+|  +2+ |  +2+ |  *2* |  +2+ |
 |  +A+ |  +A+ |  +A+ |  +A+ |
 
 ** Rules
