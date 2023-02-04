@@ -10,22 +10,25 @@
 (def uber-file-name (format "%s/%s-%s-standalone.jar" build-folder app-name version)) ; path for result uber file
 
 (defn clean [_]
-  (b/delete {:path "target"})
+  (b/delete {:path build-folder})
   (println (format "Build folder \"%s\" removed" build-folder)))
 
 (defn uber [_]
   (clean nil)
 
-  (b/copy-dir {:src-dirs   ["resources"]         ; copy resources
+  (b/copy-dir {:src-dirs   ["resources"] ; copy resources
                :target-dir jar-content})
 
-  (b/compile-clj {:basis     basis               ; compile clojure code
+  (b/write-file {:path (str build-folder "/resources/data.edn")
+                 :content {:players {}, :groups {}}})
+
+  (b/compile-clj {:basis     basis      ; compile clojure code
                   :src-dirs  ["src"]
                   :class-dir jar-content})
 
-  (b/uber {:class-dir jar-content                ; create uber file
+  (b/uber {:class-dir jar-content       ; create uber file
            :uber-file uber-file-name
            :basis     basis
-           :main      'user-in-borderland-bot.core})                ; here we specify the entry point for uberjar
+           :main      'user-in-borderland-bot.core}) ; here we specify the entry point for uberjar
 
   (println (format "Uber file created: \"%s\"" uber-file-name)))
