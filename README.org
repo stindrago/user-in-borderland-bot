@@ -46,7 +46,7 @@ CLOCK: [2023-01-26 Thu 11:22]--[2023-01-26 Thu 13:30] =>  2:08
 Adapting the manga and TV Show games of Alice In Borderland for a chat-bot in Telegram and adding some of my own.
 
 #+NAME: Chatbot preview
-#+ATTR_HTML: width="300px" :align center
+#+ATTR_HTML: :width 300px :align center
 #+ATTR_ORG: :width 100
 [[./resources/images/screenshot-1-drop-shadow.png]] [[./resources/images/screenshot-2-drop-shadow.png]] [[./resources/images/screenshot-3-drop-shadow.png]]
 
@@ -111,7 +111,7 @@ Install these packages first.
 
 1. Create a new bot with [[https://telegram.me/BotFather][BotFather]].
 2. Copy the generated token.
-3. Replace the token string in [[./resources/config.edn]], as ~:bot-token "5641905655:AAE8z..."~ with your own.
+3. Replace the token string in [[./resources/config.edn][config.edn]], as ~:bot-token "5641905655:AAE8z..."~ with your own.
 
 ** Build from source
 
