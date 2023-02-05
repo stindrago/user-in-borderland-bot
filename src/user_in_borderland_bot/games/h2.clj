@@ -143,8 +143,7 @@
           (doseq [[k v] (get @game :players)
                   :when (and (:game-over? v) (= (:wagon v) 1))]
             (handlers/send-msg-md bot chat-id (str "📢 @" (get-in @games.shared/players [:players k :username])
-                                                   ", si trovava nel vagone *" (get-in @game [:players k :wagon])
-                                                   "* quando è stato ucciso dal gas tossico.")))))))
+                                                   ", è stato ucciso dal gas tossico.")))))))
 
 (defn doors-opened->closed
   "Perform the actions to transfom the state of the doors from opened to closed."
@@ -155,7 +154,7 @@
     (if (> elapsed-time 0)
       (do (handlers/send-msg-md bot chat-id (str "📢 Sono rimasti *" (:whole elapsed-time-map)
                                                  " minuti* e *" (:remainder elapsed-time-map)
-                                                 " secondi* al *chiusura* delle porte."))
+                                                 " secondi* alla *chiusura* delle porte."))
           (Thread/sleep 20000)
           (recur bot chat-id timestamp countdown))
       (do (handlers/send-msg-md bot chat-id (str "📢 Tutte le porte sono state 🔴 *chiuse*, ora non è più possibile circolare."))
@@ -189,7 +188,7 @@
   (doseq [[k v] (get @game :players)
           :when (:game-over? v)]
     (games.shared/game-over k))
-  ;; Perform the appropiate actions when a player wins.
+  ;; Perform the appropriate actions when a player wins.
   (doseq [[k v] (get @game :players)
           :when (and (false? (:game-over? v)) (= (:wagon v) 0))]
     (games.shared/player-wins k)
