@@ -101,7 +101,7 @@ The players have to get on board the train. All players are in separated trains.
 
 ** Prerequisites
 
-Install dependencies.
+Install requirements.
 
 - openjdk@11
 - clojure
