@@ -10,11 +10,13 @@
 
 * Tasks :ignore:
 
-** TODO User In Bordeland Bot
+** DONE User In Bordeland Bot
+CLOSED: [2023-06-24 Sat 12:31]
 :PROPERTIES:
 :CATEGORY: project
 :END:
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2023-06-24 Sat 12:31]
 CLOCK: [2023-02-04 Sat 14:05]--[2023-02-04 Sat 15:05] =>  1:00
 CLOCK: [2023-02-04 Sat 10:20]--[2023-02-04 Sat 12:12] =>  1:52
 CLOCK: [2023-02-03 Fri 18:20]--[2023-02-03 Fri 19:45] =>  1:25
