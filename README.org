@@ -8,6 +8,7 @@
 #+CATEGORY: project
 #+EXCLUDE_TAGS: ignore
 
+#+BEGIN_COMMENT
 * Tasks :ignore:
 
 ** DONE User In Bordeland Bot
@@ -42,6 +43,7 @@ CLOCK: [2023-01-26 Thu 14:10]--[2023-01-26 Thu 21:30] =>  7:20
 CLOCK: [2023-01-26 Thu 11:22]--[2023-01-26 Thu 13:30] =>  2:08
 - State "TODO"       from              [2023-01-26 Thu 11:22]
 :END:
+#+END_COMMENT
 
 * About
 
